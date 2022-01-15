@@ -1,19 +1,95 @@
 <!DOCTYPE html>
 <html lang="en-GB">
     <head>
-        <title>SuperProxy</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        <link rel="stylesheet" type="text/css" href="dist/css/bundle.css" />
+        <meta name="author" content="Nat Okpe <natokpe@gmail.com>" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <title>Create an account - SuperProxy</title>
+
+        <link rel="stylesheet" type="text/css" href="css/bundle.css" />
     </head>
     <body>
 
-        <main>
-            <div class="card login-card">
-                <p>What are you looking for?</p>
-                <div class=""></div>
-            </div>
-        </main>
+        <div class="sign-on-frame">
+            <div class="container">
+                <div class="sign-on-frame-main">
 
-        <script type="text/javascript" src="dist/js/bundle.js"></script>
+                    <div class="sign-on-frame-logo">
+                        <a href="/"><img src="img/sp-logo-light.svg"></a>
+                    </div>
+
+                    <main class="sign-on-frame-form">
+                        <div class="sign-on-card">
+                            <h1 class="sign-on-card-header">Create an account</h1>
+
+                            <p>Already have an account? <a href="login.html">Sign in</a></p>
+                            <form id="login-form" method="POST" action="/">
+                                <div class="form-group type-email">
+                                    <label>
+                                        <span class="form-field-label">Email address</span>
+                                        <input type="email"
+                                               name="email"
+                                               value="" 
+                                        />
+                                    </label>
+                                </div>
+
+                                <div class="form-group type-email">
+                                    <label>
+                                        <span class="form-field-label">First name</span>
+                                        <input type="text"
+                                               name="fname"
+                                               value="" 
+                                        />
+                                    </label>
+                                </div>
+
+                                <div class="form-group type-email">
+                                    <label>
+                                        <span class="form-field-label">Last name</span>
+                                        <input type="text"
+                                               name="lname"
+                                               value="" 
+                                        />
+                                    </label>
+                                </div>
+
+                                <div class="form-group type-password">
+                                    <label>
+                                        <span class="form-field-label">Password</span>
+                                        <input type="password"
+                                               name="password"
+                                               value=""
+                                        />
+                                    </label>
+                                </div>
+
+                                <p>By clicking Create account, I agree that I have read and accepted the <a href="terms.html">Terms of Use</a> and <a href="privacy-policy.html">Privacy Policy</a>.</p>
+
+                                <button>Create an account</button>
+                            </form>
+                        </div>
+                    </main>
+                </div>
+            </div>
+
+            <footer class="sign-on-frame-footer">
+                <p>© 2021 <a href="/">SuperProxy</a></p>
+                <nav>
+                    <ul>
+                        <li><a href="">Terms of Service</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Accesibility</a></li>
+                    </ul>
+                </nav>
+            </footer>
+
+        </div>
+
+        <script type="text/javascript" src="/js/bundle.js"></script>
     </body>
 </html>
