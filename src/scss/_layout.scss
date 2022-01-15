@@ -17,54 +17,85 @@ html {
 
 body {
     @extend html;
-    background-color: rgb(237, 239, 243);
 }
 
 .container {
-    width:100%;
-    max-width: 540px;
+    width: 100%;
     margin-right:auto;
     margin-left:auto;
 
     @media (min-width:600px) {
-        max-width:960px;
+        max-width: 600px;
     }
 
     @media (min-width:840px) {
-        max-width: 1140px
+        max-width: 85%;
     }
+/*
+    @media (min-width:992px) {
+        max-width: 960px
+    }
+
+    @media (min-width:1200px) {
+        max-width: 1140px
+    }*/
 }
 
 .sign-on-frame {
     margin: 0;
     padding: 0;
     width: 100%;
-    min-height: 100vh;
-    background-image: url('../img/sign-on-bg.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
 
+    @media (min-width: 600px) {
+        min-height: 100vh;
+        background-image: url('../img/sign-on-bg.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgb(237, 239, 243);
+    }
+
     &-main {
-        padding-top: 60px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        align-content: center;
+        padding-top: 30px;
+        display: block;
+
+        @media (min-width: 600px) {
+            padding-top: 40px;
+        }
+
+        @media (min-width: 840px) {
+            padding-top: 60px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+        }
     }
 
     &-logo {
         margin: 0;
-        padding: 15px;
-        width: 49.99%;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        align-content: center;
+        padding: 0 15px 30px;
+        width: 100%;
+        text-align: center;
+
+        @media (min-width: 600px) {
+            padding: 0 15px 40px;
+        }
+
+        @media (min-width: 840px) {
+            padding: 15px;
+            width: 49.99%;
+            text-align: left;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            align-content: center;
+        }
 
         a {
             display: inline-block;
@@ -73,7 +104,31 @@ body {
 
             img {
                 width: 100%;
-                max-width: 230px;
+                max-width: 133px;
+
+                @media (min-width:600px) {
+                    max-width: 200px;
+                }
+
+                @media (min-width:840px) {
+                    max-width: 230px;
+                }
+
+                &.dark {
+                    display: inline-block;
+
+                    @media (min-width:600px) {
+                        display: none;
+                    }
+                }
+
+                &.light {
+                    display: none;
+
+                    @media (min-width:600px) {
+                        display: inline-block;
+                    }
+                }
             }
         }
     }
@@ -81,18 +136,28 @@ body {
     &-form {
         margin: 0;
         padding: 0;
-        width: 49.99%;
+        width: 100%;
+
+        @media (min-width: 840px) {
+            width: 49.99%;
+        }
     }
 
     .sign-on-card {
         margin: 0;
-        padding: 50px 60px;
+        padding: 0 50px;
         width: 100%;
-        border-radius: 6px;
         background-color: #fff;
 
+        @media (min-width: 600px) {
+            margin: 0 auto;
+            padding: 50px 60px;
+            max-width: 540px;
+            border-radius: 6px;
+        }
+
         &-header {
-            margin: 0;
+            margin: 0 0 10px;
             padding: 0;
             font-family: Roboto;
             font-style: normal;
