@@ -1,0 +1,32 @@
+{
+    "name": "sp-web-frames",
+    "version": "1.0.0",
+    "description": "",
+    "author": "Nat Okpe <natokpe@gmail.com>",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/natokpe/sp-web-frames.git"
+    },
+    "bugs": {
+        "url": "https://github.com/natokpe/sp-web-frames/issues"
+    },
+    "homepage": "https://github.com/natokpe/sp-web-frames#readme",
+    "devDependencies": {
+        "@babel/core": "^7.16.7",
+        "@babel/preset-env": "^7.16.8",
+        "babel-loader": "^8.2.3",
+        "webpack-cli": "^4.9.1"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.4",
+        "@material/layout-grid": "^13.0.0",
+        "jquery": "^3.6.0",
+        "jquery-nice-select": "^1.1.0"
+    },
+    "scripts": {
+        "test": "jest",
+        "webpack": "webpack --mode development --config webpack.config.js&&webpack --mode production --config webpack.config.js",
+        "sass": "sass --source-map --no-error-css --style=expanded --charset --source-map-urls=relative src/scss/index.scss:public/css/bundle.css&&sass --no-source-map --no-error-css --style=compressed --charset src/scss/index.scss:public/css/bundle.min.css"
+    }
+}

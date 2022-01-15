@@ -1,0 +1,161 @@
+@use 'variables' as *;
+
+*:before,
+*,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Roboto;
+    font-size: 14px;
+}
+
+body {
+    @extend html;
+    background-color: rgb(237, 239, 243);
+}
+
+.container {
+    width:100%;
+    max-width: 540px;
+    margin-right:auto;
+    margin-left:auto;
+
+    @media (min-width:600px) {
+        max-width:960px;
+    }
+
+    @media (min-width:840px) {
+        max-width: 1140px
+    }
+}
+
+.sign-on-frame {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../img/sign-on-bg.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+
+    &-main {
+        padding-top: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+
+    &-logo {
+        margin: 0;
+        padding: 15px;
+        width: 49.99%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+
+        a {
+            display: inline-block;
+            color: transparent;
+            background-color: transparent;
+
+            img {
+                width: 100%;
+                max-width: 230px;
+            }
+        }
+    }
+
+    &-form {
+        margin: 0;
+        padding: 0;
+        width: 49.99%;
+    }
+
+    .sign-on-card {
+        margin: 0;
+        padding: 50px 60px;
+        width: 100%;
+        border-radius: 6px;
+        background-color: #fff;
+
+        &-header {
+            margin: 0;
+            padding: 0;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 2.3rem;
+            line-height: 40px;
+            color: #000;
+        }
+    }
+
+    &-footer {
+        margin: auto 0 0;
+        padding: 35px 25px;
+        width: 100%;
+
+        p {
+            margin: 0 0 5px;
+            padding: 0;
+            color: #fff;
+            font-size: 0.8571428571428571rem;
+
+            a {
+                color: inherit;
+
+                &:hover,
+                &:active {
+                    color: $color-anchor;
+                }
+            }
+        }
+
+        nav {
+            margin: 0;
+            padding: 0;
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+
+                li {
+                    margin: 0;
+                    padding: 0;
+                    display: inline-block;
+
+                    &:not(:last-child):after {
+                        content: "|";
+                        margin: 0 10px;
+                        padding: 0;
+                        color: #fff;
+                    }
+
+                    a {
+                        color: #fff;
+                        font-size: 0.8571428571428571rem;
+
+                        &:hover,
+                        &:active {
+                            color: $color-anchor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+
+@mixin keep-aspect-ratio ( $size: 100 ) {
+    &:before {
+        content: "";
+        padding-top: #{ $size + '%' };
+        float: left !important;
+    }
+
+    &:after {
+        content: "";
+        display: block !important;
+        clear: both !important;
+    }
+}
+
+@mixin text-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+}

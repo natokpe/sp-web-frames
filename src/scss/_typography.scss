@@ -1,0 +1,99 @@
+@use 'variables' as *;
+
+a {
+    text-decoration: none;
+    color: $color-anchor;
+    transition: all .3s ease;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+    color: $color-anchor-dark;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h4 {
+}
+
+h5 {
+}
+
+h6 {
+}
+
+p {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.text-xs {
+    font-size: .83rem;
+}
+
+.text-small,
+.text-sm {
+    font-size: .91rem;
+}
+
+.text-large,
+.text-lg {
+    font-size: 1.3rem;
+}
+
+.text-xl {
+    font-size: 2rem;
+}
+
+.text-normal {
+    font-size: 1rem;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-white {
+    color: rgb(255,255,255);
+}
+
+.text-black {
+    color: rgb(0,0,0);
+}
+
+.text-gray {
+    color: rgb(90,90,90);
+}
+
+.text-primary {
+    color: rgb(106, 119, 28);
+}
+
+.text-secondary {
+    color: rgb(92,154,11);
+}
