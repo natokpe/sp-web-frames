@@ -26,12 +26,27 @@
                     </div>
 
                     <main class="sign-on-frame-form">
-                        <div class="sign-on-card">
-                            <form id="login-form" method="POST" action="feed.html">
+                        <div class="sign-on-card pt-30">
+                            <form id="login-form" method="POST" action="phone.html">
 
-                            <h1 class="sign-on-card-header">Create an account</h1>
+                                <div class="text-center mb-25">
+                                    <p class="p-0 m-0 mb-10">what are you loooking for?</p>
 
-                            <p class="mb-30">Already have an account? <a href="login.html">Sign in</a></p>
+                                    <div class="sign-on-user-type-switch">
+                                        <div class="switch-dropdown">
+                                            <div class="button">I'm an Artisan <span class="fa fa-chevron-down"></span></div>
+                                            <label>
+                                                <span>I need an Artisan</span>
+                                                <input type="checkbox" name="artisan" />
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <h1 class="sign-on-card-header">Create an account</h1>
+
+                                <p class="mb-30">Already have an account? <a href="login.html">Sign in</a></p>
 
                                 <div class="form-group text"><!-- add class 'notice' to show notice -->
                                     <label>
@@ -82,9 +97,8 @@
                                                name="password"
                                                value=""
                                         />
-                                        <button class="pass-toggle"><span class="fa fa-eye-slash"></span></button>
                                     </label>
-                                    <p class="notice danger">password should be at least 8 characters long and must include a number</p>
+                                    <p class="notice danger"></p>
                                 </div>
 
                                 <div class="form-group text">
@@ -123,6 +137,6 @@
 
         </div>
 
-        <script type="text/javascript" src="/js/bundle.js"></script>
+        <script type="text/javascript" src="js/bundle.js"></script>
     </body>
 </html>

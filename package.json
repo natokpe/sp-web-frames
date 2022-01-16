@@ -26,7 +26,7 @@
     },
     "scripts": {
         "test": "jest",
-        "webpack": "webpack --mode development --config webpack.config.js&&webpack --mode production --config webpack.config.js",
-        "sass": "sass --source-map --no-error-css --style=expanded --charset --source-map-urls=relative src/scss/index.scss:public/css/bundle.css&&sass --no-source-map --no-error-css --style=compressed --charset src/scss/index.scss:public/css/bundle.min.css"
+        "webpack": "webpack --mode development --config webpack.config.js",
+        "sass": "sass --source-map --no-error-css --style=expanded --charset --source-map-urls=relative src/scss/index.scss:public/css/bundle.css"
     }
 }

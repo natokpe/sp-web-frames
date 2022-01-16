@@ -1,4 +1,5 @@
 const path = require( 'path' );
+const webpack = require( 'webpack' );
 
 module.exports = ( env, options ) => {
     const theMode = options.mode ? options.mode : 'none';
@@ -33,6 +34,10 @@ module.exports = ( env, options ) => {
         },
 
         plugins: [
+            new webpack.ProvidePlugin({
+                $: 'jquery',
+                jQuery: 'jquery'
+            })
         ],
     };
 };
