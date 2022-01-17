@@ -358,8 +358,9 @@ body {
         }
 
         .otp-notice {
-            span {
-                color: $color-anchor;
+            &-highlight {
+                display: inline-block;
+                color: $color-anchor !important;
             }
         }
 
