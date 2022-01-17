@@ -194,6 +194,175 @@ body {
             border-radius: 6px;
         }
 
+        .sign-on-user-switch {
+            padding: 0;
+            display: block;
+            min-height: 42px;
+            position: relative;
+
+            &:before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,.18);
+                visibility: hidden;
+                opacity: 0;
+                transition: all .2s ease;
+                z-index: 1000;
+            }
+
+            .switch-dropdown {
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+                min-width: 228px;
+                background-color: transparent;
+                user-select: none;
+                position: relative;
+                z-index: 1001;
+
+                &-button {
+                    margin: 0;
+                    padding: 8px 15px;
+                    background-color: #fff;
+                    width: 100%;
+                    border: 2px solid #F9C900;
+                    border-radius: 12px;
+                    font-size: $fs-18;
+                    cursor: pointer;
+
+                    .artisan-set {
+                        display: none;
+                    }
+
+                    .fa {
+                        margin-left: 8px;
+                        vertical-align: baseline;
+                        transition: all .2s ease;
+                    }
+                }
+
+                label {
+                    margin: 0;
+                    padding: 5px 0;
+                    display: block;
+                    background-color: #eee;
+                    width: 100%;
+                    border: 1px solid rgba(0, 0, 0, 0.5);
+                    border-radius: 12px;
+                    transition: all .2s ease;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    z-index: -1;
+
+                    .switch-dropdown-label {
+                        margin: 0;
+                        padding: 3px 15px;
+                        display: block;
+                        font-size: $fs-18;
+                        cursor: pointer;
+                        transition: all .2s ease;
+
+                        &:hover,
+                        &:active {
+                            background-color: rgba(0, 0, 0, .07);
+                        }
+
+                        .client-set {
+                            display: none;
+                        }
+                    }
+
+                    input {
+                        visibility: hidden;
+                        opacity: 0;
+                        position: absolute;
+                        z-index: -1000;
+                    }
+                }
+            }
+
+            &.open {
+                &:before {
+                    visibility: visible;
+                    opacity: 1;
+                    z-index: 1000;
+                }
+
+                .switch-dropdown {
+
+                    &-button {
+                        .fa {
+                            transform: rotate( 180deg );
+                        }
+                    }
+
+                    label {
+                        padding-top: 49px;
+                    }
+                }
+            }
+
+            &.artisan {
+                .switch-dropdown {
+                    &-button {
+                        .artisan-set {
+                            display: inline-block;
+                        }
+
+                        .client-set {
+                            display: none;
+                        }
+                    }
+
+                    &-label {
+                        .artisan-set {
+                            display: none !important;
+                        }
+
+                        .client-set {
+                            display: inline-block !important;
+                        }
+                    }
+                }
+            }
+
+            &.client {
+                .switch-dropdown {
+                    &-button {
+                        .artisan-set {
+                            display: none;
+                        }
+
+                        .client-set {
+                            display: inline-block;
+                        }
+                    }
+
+                    &-label {
+                        .artisan-set {
+                            display: inline-block !important;
+                        }
+
+                        .client-set {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .otp-notice {
+            span {
+                color: $color-anchor;
+            }
+        }
+
         &-header {
             margin: 0 0 10px;
             padding: 0;
