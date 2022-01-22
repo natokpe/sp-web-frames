@@ -1,4 +1,4 @@
-$color-primary: rgb(30, 144, 255);
+$color-primary: rgb(249, 201, 0);
 $color-primary-light: rgb(119, 187, 255);
 $color-primary-dark: rgb(0, 116, 232);
 
@@ -15,7 +15,13 @@ $color-warning: rgb(255, 204, 0);
 $color-success: rgb(0, 159, 80);
 $color-info: rgb(0, 138, 204);
 
-$breakpoint-tablet: 600px;
+$bp-mobile-min: 0px;
+$bp-mobile-max: 599.9999px;
+
+$bp-tablet-min: 600px;
+$bp-tablet-max: 991.9999px;
+
+$bp-desktop-min: 992px;
 
 $ff-normal: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
 

@@ -25,8 +25,10 @@
         "jquery-nice-select": "^1.1.0"
     },
     "scripts": {
-        "test": "jest",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "sass --source-map --no-error-css --style=expanded --charset --source-map-urls=relative src/index.scss:public/css/bundle.css&&sass --no-source-map --no-error-css --style=compressed --charset src/index.scss:public/css/bundle.min.css&&webpack --mode development --config webpack.config.js&&webpack --mode production --config webpack.config.js",
+        "build-dev": "sass --source-map --no-error-css --style=expanded --charset --source-map-urls=relative src/index.scss:public/css/bundle.css&&webpack --mode development --config webpack.config.js",
         "webpack": "webpack --mode development --config webpack.config.js",
-        "sass": "sass --source-map --no-error-css --style=expanded --charset --source-map-urls=relative src/scss/index.scss:public/css/bundle.css"
+        "sass": "sass --source-map --no-error-css --style=expanded --charset --source-map-urls=relative src/index.scss:public/css/bundle.css"
     }
 }

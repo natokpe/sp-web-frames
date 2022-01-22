@@ -49,7 +49,7 @@
                 left: auto;
                 right: auto;
                 transform: translateY(-50%);
-                transition: all .1s ease;
+                transition: all .14s ease;
             }
 
             &:focus-within:before {
@@ -115,6 +115,186 @@
         &-cell {
             display: inline-block;
             width: calc( 50% - 10px );
+
+            &.cell-4 {
+                width: calc( 40% - 10px );
+            }
+
+            &.cell-6 {
+                width: calc( 60% - 10px );
+            }
+        }
+
+        &.stack-mobile {
+            @media ( max-width:599px) {
+                flex-direction: column;
+            }
+
+            .form-group-grid-cell {
+                &.cell-4,
+                &.cell-6 {
+                    @media ( max-width:599px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cc-dropdown {
+    padding: 0;
+    display: block;
+    width: 100%;
+    position: relative;
+
+    &-btn {
+        margin: 0;
+        padding: 12px 0 8px;
+        width: 100%;
+        min-height: 38px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+        transition: all .14s ease;
+        cursor: pointer;
+        position: relative;
+
+        &:before {
+            content: "";
+            width: 0;
+            height: 2px;
+            background-color: #F9C900;
+            position: absolute;
+            top: 100%;
+            left: auto;
+            right: auto;
+            transform: translateY(-50%);
+            transition: all .14s ease;
+        }
+    }
+
+    &-label {
+        margin: 0;
+        padding: 0;
+        padding-right: 76px;
+        display: block;
+        width: 100%;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: $fs-normal;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &-code {
+        color: #000;
+        font-size: $fs-18;
+        position: absolute;
+        top: 50%;
+        right: 28px;
+        transform: translateY(-50%);
+    }
+
+    &-arrow {
+        color: #000;
+        font-size: $fs-18;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%) rotate(0);
+        transition: all .2s ease;
+    }
+
+    .cc-dropdown-list {
+        margin: 0;
+        padding: 6px 0;
+        display: inline-block;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 6px;
+        width: auto;
+        min-width: 100%;
+        max-width: 100%;
+        max-height: 240px;
+        box-shadow: 0 3px 2px 0 rgba(0, 0, 0, .06);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all .25s ease;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: absolute;
+        top: calc( 100% + 5px );
+        left: 0;
+        z-index: 1000;
+
+        @media ( min-width: $bp-tablet-min) {
+            max-width: 150%;
+        }
+
+
+        &-item {
+            margin: 0;
+            padding: 8px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            background-color: #fff;
+            transition: all .25s ease;
+            width: 100%;
+            cursor: pointer;
+
+            &.selected {
+                background-color: rgba(0, 0, 0, .04);
+            }
+
+            &:hover {
+                background-color: rgba(0, 0, 0, .06);
+            }
+
+            &-name {
+                padding-right: 10px;
+                color: rgba(0, 0, 0, 0.8);
+                font-size: $fs-normal;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            &-code {
+                // font-style: italic;
+                color: rgba(0, 0, 0, 0.7);
+                font-size: $fs-normal;
+            }
+
+            input {
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                z-index: -1000;
+            }
+        }
+    }
+
+    &.open {
+        .cc-dropdown-arrow {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .cc-dropdown-btn {
+            &:before {
+                width: 100%;
+                left: 0;
+                right: 0;
+            }
+        }
+
+        .cc-dropdown-list {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
         }
     }
 }

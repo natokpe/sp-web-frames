@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 /* Margin top */
 $c: 0;
 @while $c <= 100 {
@@ -23,6 +25,12 @@ $c: 0;
 @while $c <= 100 {
     .mb-#{$c} {
         margin-bottom: #{$c}px !important;
+
+        &-mobile {
+            @media ( max-width: $bp-mobile-max) {
+                margin-bottom: #{$c}px !important;
+            }
+        }
     }
 
     $c: $c + 5;

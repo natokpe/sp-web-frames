@@ -1,4 +1,5 @@
 @use 'fa/all.css';
+@use 'coolicons.css';
 @use '../../node_modules/@material/layout-grid/dist/mdc.layout-grid.css';
 // @use '../../node_modules/jquery-nice-select/css/nice-select.css';
 
@@ -8,3 +9,4 @@
 @use 'buttons';
 @use 'layout';
 @use 'spacing';
+@use 'navbar';
