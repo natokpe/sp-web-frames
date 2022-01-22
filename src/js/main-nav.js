@@ -33,16 +33,10 @@ $( document ).ready( function() {
     .each( function ( i, el ) {
         const toggle = $( this );
         const item = toggle.closest( '.icon-nav-list-item' );
-        // const navbar = item.closest( '.navbar' );
 
         toggle.on( 'click', function ( e ) {
             e.preventDefault();
             item.toggleClass( 'active' );
-
-            // if ( item.hasClass( 'active' ) )
-            //     navbar.addClass( 'item-open' );
-            // else
-            //     navbar.removeClass( 'item-open' );
         });
 
         $( document ).on( 'click', function ( e ) {
@@ -50,7 +44,6 @@ $( document ).ready( function() {
                 && toggle.has( e.target ).length === 0 ) {
                 if ( item.hasClass( 'active' ) ) {
                     item.removeClass( 'active' );
-                    // navbar.removeClass( 'item-open' );
                 }
             }
         });
